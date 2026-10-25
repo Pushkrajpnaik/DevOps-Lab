@@ -1,3 +1,3 @@
-# Git Collaboration Demo
+# Git Collaboration Demo - Feature Branch Version
 
-This is the original content on the main branch.
+This change was made on the conflicting-feature branch.
