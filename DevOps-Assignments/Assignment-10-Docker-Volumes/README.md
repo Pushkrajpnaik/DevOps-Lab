@@ -1,15 +1,27 @@
-# Assignment 10: Docker Volumes and Data Persistence
+# Assignment 10: Docker Volumes & Data Persistence
 
 ## Objective
-To demonstrate persistent data storage using a Docker named volume.
+To demonstrate persistent storage using Docker named volumes.
 
-## Procedure
-1. Created a named volume called `devops-data`.
-2. Mounted the volume at `/data` in a temporary Alpine Linux container.
-3. Created `message.txt` containing a test message.
-4. Removed the container without deleting the volume.
-5. Mounted the same volume in a new container and read the file.
-6. Inspected the volume using Docker CLI commands.
+## Files
+- app.py: Flask application that writes timestamped greetings to a log file.
+- requirements.txt: Flask dependency.
+- Dockerfile: Builds the application image and exposes port 5001.
 
-## Result
-Successfully verified that data persisted after the original container was removed.
+## Implementation
+1. Created the Flask application with `/` and `/logs` routes.
+2. Built the Docker image `my-flask-app:v2`.
+3. Created the named volume `my-app-data`.
+4. Ran `flask-volume-demo` with the volume mounted at `/app/data`.
+5. Accessed the application repeatedly to create log entries.
+6. Stopped and removed the first container.
+7. Started `flask-volume-demo2` using the same volume.
+8. Verified that the previous log entries were preserved.
+
+## Verification
+Command: `curl http://localhost:8082/logs`
+
+Result: Previously written timestamped log entries remained available after the original container was removed.
+
+## Conclusion
+Docker named volumes preserve application data independently of a container's lifecycle.
