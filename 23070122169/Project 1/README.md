@@ -1,7 +1,7 @@
 # Project 1 – Dockerizing Jenkins Pipeline
 
-**Student Name:** Om Dhamame
-**PRN:** 23070122155
+**Student Name:** Pushkraj P Naik
+**PRN:** 23070122169
 
 ---
 
