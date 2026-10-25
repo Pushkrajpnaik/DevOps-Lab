@@ -1,3 +1,3 @@
-# Git Collaboration Demo
+# Git Collaboration Demo - Main Branch
 
-This is the original content shared by both branches.
+This version was written by Developer B.
